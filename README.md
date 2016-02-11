@@ -12,27 +12,27 @@ Optionally install supervisor to continuously run the python script for you (inc
 
 `echo_supervisord_conf > /etc/supervisord.conf`
 
-`cat >> /etc/supervisord.conf <<EOF
+`cat >> /etc/supervisord.conf <<EOF`
 
-[program:tempwatch]
+`[program:tempwatch]`
 
-command=/home/pi/tempwatch/tempwatch.sh
+`command=/home/pi/tempwatch/tempwatch.sh`
 
-autostart=true
+`autostart=true`
 
-autorestart=true
+`autorestart=true`
 
-startretries=3
+`startretries=3`
 
-stderr_logfile=/var/log/tempservice.log
+`stderr_logfile=/var/log/tempservice.log`
 
-stdout_logfile=/var/log/tempservice.log
+`stdout_logfile=/var/log/tempservice.log`
 
-;user=www-data
+`;user=www-data`
 
-;environment=SECRET_PASSPHRASE='this is secret',SECRET_TWO='another secret'
+`;environment=SECRET_PASSPHRASE='this is secret',SECRET_TWO='another secret'`
 
-EOF`
+`EOF`
 
 Init scripts for auto start of supervisor can be found here:
 https://github.com/Supervisor/initscripts
