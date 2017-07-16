@@ -1,5 +1,10 @@
 # tort-temp Install
-Clone the repository
+
+Install a python library for the database connection
+
+`apt-get install python-psycopg2`
+
+Clone the repository into /home/pi/tempwatch/
 
 Create a tempwatch.sh using the sample and populate the database url with your own postgres database
 
