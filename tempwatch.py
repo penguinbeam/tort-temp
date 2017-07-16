@@ -45,14 +45,21 @@ class GracefulInterruptHandler(object):
 
 #  filename = "/home/pi/tempwatch/temp1data.log"
 
+#ls -l /sys/bus/w1/devices/ | grep -e "[0-9][0-9]:[0-9][0-9] [0-9][0-9]-" | awk '{print $9}'
+
+
 dataFile = [ "/sys/bus/w1/devices/28-021573383cff/w1_slave","/sys/bus/w1/devices/28-021573a916ff/w1_slave","/sys/bus/w1/devices/28-021573a938ff/w1_slave","/sys/bus/w1/devices/28-03157478d0ff/w1_slave" ]
+
+
+#dataFile = [ "/sys/bus/w1/devices/28-000006532e6e/w1_slave" ]
 
 with GracefulInterruptHandler() as h:
 	while True:
                 timestamp = time.strftime("%H:%M %d/%m") 
                 tempForDB = [];
 
-                for x in xrange(0, 4):
+                for x in xrange(0, len(dataFile)):
+                #for x in xrange(0, 4):
 #                        print(dataFile[x]);
 
                         tfile = open(dataFile[x])
