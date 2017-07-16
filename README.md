@@ -42,7 +42,9 @@ Optionally install supervisor to continuously run the python script for you (inc
 Init scripts for auto start of supervisor can be found here:
 https://github.com/Supervisor/initscripts
 
-Once suitable script is placed in /etc/init.d/supervisor and is executable:
+There is one in etc/init.d/supervisor to copy to /etc/init.d/supervisor if you want.
+
+Once suitable script is placed in /etc/init.d/supervisor and is executable (check permissions!):
 
 `chkconfig supervisor on`
 
